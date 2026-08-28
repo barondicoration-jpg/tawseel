@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+front-end/node_modules/
+server/node_modules/
+
+# Build output
+front-end/dist/
+
+# Environment files — never commit secrets
+.env
+.env.local
+.env.production.local
+server/.env
+front-end/.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db

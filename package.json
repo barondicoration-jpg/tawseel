@@ -1,0 +1,15 @@
+{
+  "name": "agon-agent",
+  "version": "1.0.0",
+  "description": "Delivery & Collection Management System",
+  "private": true,
+  "scripts": {
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd front-end && npm run dev",
+    "build": "cd front-end && npm install && npm run build",
+    "seed": "cd server && npm run seed"
+  },
+  "engines": {
+    "node": ">=18.x"
+  }
+}
