@@ -4,8 +4,7 @@
   "description": "Delivery & Collection Management System",
   "private": true,
   "scripts": {
-    "build": "npm install --prefix front-end && npm run build --prefix front-end",
-    "install-server": "npm install --prefix server",
+    "build": "npm run build --prefix front-end",
     "dev:server": "npm run dev --prefix server",
     "dev:client": "npm run dev --prefix front-end",
     "seed": "npm run seed --prefix server"
