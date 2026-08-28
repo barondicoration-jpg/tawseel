@@ -2,10 +2,7 @@
 set -e
 
 echo ">>> Installing front-end dependencies..."
-cd front-end
-npm install
-npm approve-scripts esbuild 2>/dev/null || true
-cd ..
+npm install --prefix front-end --foreground-scripts --ignore-scripts=false
 
 echo ">>> Building front-end..."
 npm run build --prefix front-end
