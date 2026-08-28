@@ -4,10 +4,11 @@
   "description": "Delivery & Collection Management System",
   "private": true,
   "scripts": {
-    "dev:server": "cd server && npm run dev",
-    "dev:client": "cd front-end && npm run dev",
-    "build": "cd front-end && npm install && npm run build",
-    "seed": "cd server && npm run seed"
+    "build": "npm install --prefix front-end && npm run build --prefix front-end",
+    "install-server": "npm install --prefix server",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix front-end",
+    "seed": "npm run seed --prefix server"
   },
   "engines": {
     "node": ">=18.x"

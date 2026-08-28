@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { User, Order, OrderStatus } from "../types";
 import { ordersApi } from "../api/ordersApi";
 import { usersApi } from "../api/usersApi";
+import { zonesApi } from "../api/zonesApi";
 import { getTodayISO } from "../store";
 import {
   Plus,
@@ -104,7 +105,7 @@ export default function Orders({ user }: OrdersProps) {
         const [, dels, zonesData] = await Promise.all([
           loadOrders(),
           usersApi.getDelegates(),
-          import("../api/zonesApi").then((m) => m.zonesApi.getAll()),
+          zonesApi.getAll(),
         ]);
         setDelegates(dels.map((d: any) => ({ ...d, id: d._id || d.id })));
         setZones(zonesData.map((z: any) => z.name));
