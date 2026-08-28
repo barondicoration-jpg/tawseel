@@ -29,6 +29,21 @@ connectDB().catch((err) =>
 
 const app = express();
 
+// Middleware to ensure DB is connected before processing any request
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    res
+      .status(503)
+      .json({
+        status: "error",
+        message: "Database unavailable, please try again.",
+      });
+  }
+});
+
 // ── CORS ──────────────────────────────────────────────────────────────────────
 const allowedOrigins = process.env.CLIENT_ORIGIN
   ? process.env.CLIENT_ORIGIN.split(",").map((o) => o.trim())
