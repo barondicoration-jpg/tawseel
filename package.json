@@ -5,7 +5,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run build --prefix front-end",
+    "build": "npm install --prefix front-end && npm run build --prefix front-end",
     "dev:server": "npm run dev --prefix server",
     "dev:client": "npm run dev --prefix front-end",
     "seed": "npm run seed --prefix server"

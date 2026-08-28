@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
+  "buildCommand": "npm install --prefix front-end && npm run build --prefix front-end",
   "outputDirectory": "front-end/dist",
   "functions": {
     "api/index.js": {
