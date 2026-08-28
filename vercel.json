@@ -6,7 +6,8 @@
   "functions": {
     "api/index.js": {
       "memory": 512,
-      "maxDuration": 30
+      "maxDuration": 30,
+      "includeFiles": "server/src/**"
     }
   },
   "rewrites": [
